@@ -54,5 +54,14 @@ namespace UnitTestRange
             return new int[] {valores.FirstOrDefault(),valores.LastOrDefault()};
         }
 
+        public bool overlapsRange(Range r){
+            var overlap = r.valores.Intersect(this.valores);
+            if (overlap.Count() != 0)
+            {
+                return true;
+            }
+            return false;
+        }
+
     }
 }

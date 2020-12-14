@@ -131,12 +131,28 @@ namespace UnitTestRange
             var v = R1.endPoints();
             Assert.Equal(v,v2);
         }
-          [Fact]
+        
+        [Fact]
         public void TestEsc612(){
             Range R1 = new Range("(0,10)");
             int[] v2 = new int[2] {1,9};
             var v = R1.endPoints();
             Assert.Equal(v,v2);
+        }
+
+        [Fact]
+        public void TestEsc711(){
+            Range R1 = new Range("[2,5)");
+            Range R2 = new Range("[1,2)");
+            var v = R1.overlapsRange(R2);
+            Assert.Equal(v,false);
+        }
+        [Fact]
+        public void TestEsc712(){
+            Range R1 = new Range("[2,5)");
+            Range R2 = new Range("[1,2]");
+            var v = R1.overlapsRange(R2);
+            Assert.Equal(v,true);
         }
 
     }
