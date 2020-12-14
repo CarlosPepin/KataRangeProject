@@ -92,6 +92,14 @@ namespace UnitTestRange
             Assert.Equal(v,v2);
         }
 
+         [Fact]
+        public void TestEsc413(){
+            Range R1 = new Range("(1,3)");
+            var v = R1.getAllPoints();
+            List<int> v2 = new List<int>(){2};
+            Assert.Equal(v,v2);
+        }
+
 
 
 
