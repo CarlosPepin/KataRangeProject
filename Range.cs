@@ -28,9 +28,10 @@ namespace UnitTestRange
             if (Right - Left >= 0){
                 this.valores = Enumerable.Range(Left, Right - Left + 1).ToList();
             }
+        }  
 
-            
-           
-        }      
+        public bool Contains(int val){
+            return this.valores.Contains(val);
+        }    
     }
 }

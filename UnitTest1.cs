@@ -40,11 +40,17 @@ namespace UnitTestRange
             Assert.Equal( c3 && c4, true);
         }
         [Fact]
-        public void TestEsc115()
+        public void TestEsc121()
         {
             Range R1 = new Range("(1,2)");
             var c5 = R1.valores.Count;
             Assert.Equal( c5 == 0, true);
+        }
+        [Fact]
+        public void TestEsc211(){
+            Range R1 = new Range("(2,6)");
+            var v = R1.Contains(6);
+            Assert.Equal(v,false);
         }
 
 
