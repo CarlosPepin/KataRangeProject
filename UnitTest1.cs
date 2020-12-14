@@ -39,6 +39,7 @@ namespace UnitTestRange
             var c3 = R1.Right == 1;
             Assert.Equal( c3 && c4, true);
         }
+
         [Fact]
         public void TestEsc121()
         {
@@ -46,11 +47,19 @@ namespace UnitTestRange
             var c5 = R1.valores.Count;
             Assert.Equal( c5 == 0, true);
         }
+
         [Fact]
         public void TestEsc211(){
             Range R1 = new Range("(2,6)");
             var v = R1.Contains(6);
             Assert.Equal(v,false);
+        }
+
+        [Fact]
+        public void TestEsc212(){
+            Range R1 = new Range("(2,6]");
+            var v = R1.Contains(6);
+            Assert.Equal(v,true);
         }
 
 
