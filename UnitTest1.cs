@@ -154,6 +154,12 @@ namespace UnitTestRange
             var v = R1.overlapsRange(R2);
             Assert.Equal(v,true);
         }
-
+         [Fact]
+        public void TestEsc811(){
+            Range R1 = new Range("(5,3)");
+            Range R2 = new Range("(5,3)");
+            var v = R1.EqualRange(R2);
+            Assert.Equal(v,true);
+        }
     }
 }

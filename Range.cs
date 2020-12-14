@@ -62,6 +62,9 @@ namespace UnitTestRange
             }
             return false;
         }
+        public bool EqualRange(Range r){
+            return r.rango == this.rango;
+        }
 
     }
 }
