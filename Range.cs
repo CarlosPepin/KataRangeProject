@@ -33,8 +33,12 @@ namespace UnitTestRange
         public bool Contains(int val){
             return this.valores.Contains(val);
         }    
-         public bool notContains(int val){
+        public bool notContains(int val){
             return !this.valores.Contains(val);
+        } 
+
+        public List<int> getAllPoints(){
+            return this.valores;
         } 
     }
 }

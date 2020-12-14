@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace UnitTestRange
@@ -68,12 +69,24 @@ namespace UnitTestRange
             var v = R1.notContains(2);
             Assert.Equal(v,false);
         }
-         [Fact]
+        
+        [Fact]
         public void TestEsc312(){
             Range R1 = new Range("(2,9]");
             var v = R1.notContains(2);
             Assert.Equal(v,true);
         }
+
+        [Fact]
+        public void TestEsc411(){
+            Range R1 = new Range("[1,4]");
+            var v = R1.getAllPoints();
+            List<int> v2 = new List<int>(){1,2,3,4};
+            Assert.Equal(v,v2);
+        }
+
+
+
 
 
     }
