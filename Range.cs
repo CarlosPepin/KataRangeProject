@@ -41,11 +41,18 @@ namespace UnitTestRange
             return this.valores;
         } 
          public bool ContainsRange(Range r){
-             if(this.Left <= r.Left && this.Right >= r.Right)
-             return true;
+            if(this.Left <= r.Left && this.Right >= r.Right)
+                return true;
 
              return false;
-             
+
         } 
+
+        public int[] endPoints(){
+            if (valores.FirstOrDefault() == valores.LastOrDefault())
+                return new int[] {valores.FirstOrDefault()};
+            return new int[] {valores.FirstOrDefault(),valores.LastOrDefault()};
+        }
+
     }
 }
