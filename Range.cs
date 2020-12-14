@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace UnitTestRange
 {
@@ -7,6 +9,7 @@ namespace UnitTestRange
         public int Left, Right;
         public bool IsLeftOpen, IsRightOpen;
         public string rango;
+        public List<int> valores = new List<int>();
 
         public Range(string rango){
             this.rango = rango;
@@ -22,6 +25,11 @@ namespace UnitTestRange
             if (IsRightOpen)
                 this.Right = Right - 1;
 
+            if (Right - Left >= 0){
+                this.valores = Enumerable.Range(Left, Right - Left + 1).ToList();
+            }
+
+            
            
         }      
     }

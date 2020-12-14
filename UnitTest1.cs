@@ -37,7 +37,14 @@ namespace UnitTestRange
             Range R1 = new Range("[1,2)");
             var c4 = R1.Left == 1;
             var c3 = R1.Right == 1;
-            Assert.Equal( c3 && c4, false);
+            Assert.Equal( c3 && c4, true);
+        }
+        [Fact]
+        public void TestEsc115()
+        {
+            Range R1 = new Range("(1,2)");
+            var c5 = R1.valores.Count;
+            Assert.Equal( c5 == 0, true);
         }
 
 
