@@ -62,6 +62,13 @@ namespace UnitTestRange
             Assert.Equal(v,true);
         }
 
+        [Fact]
+        public void TestEsc311(){
+            Range R1 = new Range("[2,9]");
+            var v = R1.notContains(2);
+            Assert.Equal(v,false);
+        }
+
 
 
     }
