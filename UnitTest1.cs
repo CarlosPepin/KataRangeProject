@@ -108,6 +108,14 @@ namespace UnitTestRange
             Assert.Equal(v,v2);
         }
 
+        [Fact]
+        public void TestEsc511(){
+            Range R1 = new Range("(0,9)");
+            Range R2 = new Range("[0,9]");
+            var v = R1.ContainsRange(R2);
+            Assert.Equal(v,false);
+        }
+
 
 
     }

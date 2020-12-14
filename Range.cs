@@ -40,5 +40,12 @@ namespace UnitTestRange
         public List<int> getAllPoints(){
             return this.valores;
         } 
+         public bool ContainsRange(Range r){
+             if(this.Left <= r.Left && this.Right >= r.Right)
+             return true;
+
+             return false;
+             
+        } 
     }
 }
