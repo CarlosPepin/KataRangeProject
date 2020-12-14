@@ -23,6 +23,16 @@ namespace UnitTestRange
             Assert.Equal( c3 && c4 ,true);
         }
 
+        [Fact]
+        public void TestEsc113()
+        {
+            Range R1 = new Range("(1,2]");
+            var c4 = R1.Left == 2;
+            var c3 = R1.Right == 2;
+            Assert.Equal( c3 && c4, true);
+        }
+
+
 
     }
 }

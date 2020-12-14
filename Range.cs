@@ -19,7 +19,7 @@ namespace UnitTestRange
 
             if (IsLeftOpen)
                 this.Left = Left + 1;
-            if (IsLeftOpen)
+            if (IsRightOpen)
                 this.Right = Right - 1;
 
            
