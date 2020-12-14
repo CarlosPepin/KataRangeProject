@@ -131,7 +131,13 @@ namespace UnitTestRange
             var v = R1.endPoints();
             Assert.Equal(v,v2);
         }
-
+          [Fact]
+        public void TestEsc612(){
+            Range R1 = new Range("(0,10)");
+            int[] v2 = new int[2] {1,9};
+            var v = R1.endPoints();
+            Assert.Equal(v,v2);
+        }
 
     }
 }
